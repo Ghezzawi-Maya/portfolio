@@ -53,3 +53,31 @@ nav a.active{color:var(--cyan)}
 /* Expertise rows are informational rather than links. */
 .expertise-row{grid-template-columns:70px .8fr 1.15fr}
 @media(max-width:950px){.expertise-row{grid-template-columns:45px 1fr}.expertise-row p{grid-column:2}}
+
+/* Code-native electronics visuals: no generated or stock imagery. */
+.hero-visual{position:absolute;z-index:1;right:-3%;top:7%;width:min(68vw,980px);height:86%;pointer-events:none;filter:drop-shadow(0 35px 75px rgba(0,0,0,.38))}
+.hero-visual svg{width:100%;height:100%;overflow:visible}
+.pcb-board{transform-origin:center;animation:board-float 7s ease-in-out infinite}
+.pcb-trace{fill:none;stroke:#68e4ff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:8 10;animation:trace-flow 2.8s linear infinite}
+.pcb-trace.t2{stroke:#ff8b56;animation-duration:3.6s}.pcb-trace.t3{animation-duration:2.2s}
+.rf-field{opacity:.42;stroke-width:2;stroke-dasharray:8 10;animation:rf-pulse 3.2s ease-in-out infinite}
+.antenna-path{filter:drop-shadow(0 0 7px rgba(255,139,86,.55))}
+.visual-label{position:absolute;min-width:128px;padding:9px 11px;border-left:2px solid var(--cyan);background:rgba(5,17,27,.72);backdrop-filter:blur(7px);font:400 9px/1.45 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:#93a7b2}
+.visual-label span{display:block;color:var(--cyan);font-weight:500}.label-pcb{left:14%;top:25%}.label-rf{right:4%;top:29%;border-color:var(--copper)}.label-rf span{color:var(--copper)}.label-fw{right:12%;bottom:14%}
+.technical-visual{display:flex;align-items:center;justify-content:center;padding:clamp(24px,4vw,52px);background:#06131e;position:relative}
+.technical-visual:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 20%,rgba(104,228,255,.12),transparent 35%),linear-gradient(135deg,transparent 0 49.8%,rgba(104,228,255,.06) 50%,transparent 50.2%);pointer-events:none}
+.scope-window{position:relative;width:100%;max-width:680px;border:1px solid rgba(104,228,255,.32);background:rgba(4,15,24,.92);box-shadow:0 22px 70px rgba(0,0,0,.42),inset 0 0 45px rgba(104,228,255,.035)}
+.scope-head,.scope-foot{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:12px 15px;font:500 8px var(--mono);letter-spacing:.12em;color:#79909d;border-bottom:1px solid rgba(104,228,255,.17)}
+.scope-live{color:var(--lime)}.scope-live i{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--lime);margin-right:5px;box-shadow:0 0 10px var(--lime)}
+.scope-window svg{display:block;width:100%;height:clamp(230px,30vw,370px)}
+.scope-wave{fill:none;stroke-width:3;vector-effect:non-scaling-stroke;stroke-linejoin:round;stroke-linecap:round;stroke-dasharray:1400;stroke-dashoffset:1400;animation:scope-draw 4s ease-in-out infinite alternate}
+.wave-a{stroke:var(--cyan)}.wave-b{stroke:var(--copper);stroke-width:2;animation-delay:.55s}
+.scope-foot{border-top:1px solid rgba(104,228,255,.17);border-bottom:0;justify-content:flex-start;flex-wrap:wrap}.scope-foot span:last-child{margin-left:auto;color:#a7b6bd}.scope-foot i{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:6px}.scope-foot .cyan{background:var(--cyan)}.scope-foot .orange{background:var(--copper)}
+.validation-modules{position:absolute;right:17px;bottom:12px;display:flex;gap:7px;align-items:center;font:500 7px var(--mono);letter-spacing:.08em;color:#67808c}.validation-modules i{width:16px;height:1px;background:#48616c}
+@keyframes board-float{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-13px) rotate(1deg)}}
+@keyframes trace-flow{to{stroke-dashoffset:-36}}
+@keyframes rf-pulse{0%,100%{opacity:.22;transform:scale(.98)}50%{opacity:.62;transform:scale(1.015)}}
+@keyframes scope-draw{0%{stroke-dashoffset:1400;opacity:.45}40%,100%{stroke-dashoffset:0;opacity:1}}
+@media(max-width:950px){.hero-visual{right:-25%;width:105vw;opacity:.72}.visual-label{display:none}.technical-visual{min-height:440px}}
+@media(max-width:620px){.hero-visual{right:-52%;top:13%;width:155vw;height:68%;opacity:.5}.technical-visual{min-height:340px;padding:18px}.scope-head,.scope-foot{font-size:7px}.scope-foot span:last-child{display:none}.validation-modules{display:none}}
+@media(prefers-reduced-motion:reduce){.pcb-board,.pcb-trace,.rf-field,.scope-wave{animation:none}.scope-wave{stroke-dashoffset:0}}

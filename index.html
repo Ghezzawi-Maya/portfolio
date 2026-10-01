@@ -7,12 +7,12 @@
   <meta name="theme-color" content="#07131f">
   <meta property="og:title" content="Maya Ghezzawi — Embedded Electronics Engineer">
   <meta property="og:description" content="From first component choice to a validated prototype: embedded hardware, PCB, RF and firmware integration.">
-  <meta property="og:image" content="assets/hero-electronics.png">
+  <meta property="og:image" content="assets/maya-ghezzawi.jpg">
   <title>Maya Ghezzawi — Embedded Electronics Engineer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261002-5">
+  <link rel="stylesheet" href="styles.css?v=20261002-6">
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -25,7 +25,31 @@
   </header>
   <main>
     <section id="home" class="hero">
-      <div class="hero-image" aria-hidden="true"></div><div class="hero-vignette" aria-hidden="true"></div>
+      <div class="hero-visual" aria-hidden="true">
+        <svg viewBox="0 0 900 760" role="presentation">
+          <defs>
+            <pattern id="pcb-grid" width="34" height="34" patternUnits="userSpaceOnUse"><path d="M34 0H0V34" fill="none" stroke="rgba(104,228,255,.12)" stroke-width="1"/></pattern>
+            <linearGradient id="board-fill" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d3445"/><stop offset="1" stop-color="#071722"/></linearGradient>
+            <filter id="soft-glow"><feGaussianBlur stdDeviation="4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+          </defs>
+          <g class="rf-field" fill="none" stroke="#68e4ff"><path d="M665 140c85 36 85 154 0 190"/><path d="M690 105c130 58 130 220 0 278"/><path d="M716 72c172 75 172 303 0 378"/></g>
+          <g class="pcb-board">
+            <polygon points="160,205 684,280 728,590 202,515" fill="url(#board-fill)" stroke="#386879" stroke-width="2"/>
+            <polygon points="160,205 684,280 728,590 202,515" fill="url(#pcb-grid)" opacity=".65"/>
+            <path class="pcb-trace t1" d="M205 272L316 287L349 342L475 360L504 420L670 444"/>
+            <path class="pcb-trace t2" d="M233 454L337 469L382 418L506 437L553 502L684 521"/>
+            <path class="pcb-trace t3" d="M190 340L290 355L336 388L442 405"/>
+            <g class="chip-body"><rect x="379" y="316" width="177" height="155" rx="8" fill="#071019" stroke="#ff8b56" stroke-width="2"/><rect x="397" y="334" width="141" height="119" rx="4" fill="#0d1b26"/><circle cx="414" cy="351" r="5" fill="#c8ff65"/></g>
+            <g class="chip-pins" stroke="#8ab1bd" stroke-width="5"><path d="M390 307v-22M414 310v-22M438 313v-22M462 317v-22M486 320v-22M510 324v-22M534 327v-22M398 467v22M422 470v22M446 474v22M470 477v22M494 481v22M518 484v22M542 488v22"/></g>
+            <path class="antenna-path" d="M578 329h62v20h-44v20h44v20h-44v20h62" fill="none" stroke="#ff8b56" stroke-width="7"/>
+            <g class="pcb-nodes" fill="#c8ff65" filter="url(#soft-glow)"><circle cx="205" cy="272" r="5"/><circle cx="316" cy="287" r="5"/><circle cx="349" cy="342" r="5"/><circle cx="670" cy="444" r="5"/><circle cx="233" cy="454" r="5"/><circle cx="684" cy="521" r="5"/></g>
+          </g>
+        </svg>
+        <div class="visual-label label-pcb"><span>PCB</span>Multilayer design</div>
+        <div class="visual-label label-rf"><span>RF</span>Antenna path</div>
+        <div class="visual-label label-fw"><span>FW</span>Hardware bring-up</div>
+      </div>
+      <div class="hero-vignette" aria-hidden="true"></div>
       <div class="hero-content">
         <div class="availability reveal"><span class="pulse"></span> Available immediately · France & Belgium</div>
         <p class="kicker reveal">Embedded electronics · RF · Hardware integration</p>
@@ -72,7 +96,20 @@
     <section id="work" class="section work">
       <div class="section-heading"><div class="section-index reveal">03 / Selected work</div><h2 class="reveal">A few chapters from<br>my engineering journey.</h2></div>
       <article class="case-study case-hero reveal tilt-card">
-        <div class="case-image"><img src="assets/lab-validation.png" alt="Electronics PCB validation on a laboratory workbench"></div>
+        <div class="case-image technical-visual" role="img" aria-label="Conceptual electronics validation interface with animated signals">
+          <div class="scope-window">
+            <div class="scope-head"><span>VALIDATION VIEW</span><span class="scope-live"><i></i> CONCEPTUAL</span></div>
+            <svg viewBox="0 0 700 370" preserveAspectRatio="none" aria-hidden="true">
+              <defs><pattern id="scope-grid" width="70" height="46" patternUnits="userSpaceOnUse"><path d="M70 0H0V46" fill="none" stroke="rgba(104,228,255,.13)" stroke-width="1"/></pattern></defs>
+              <rect width="700" height="370" fill="url(#scope-grid)"/>
+              <path class="scope-wave wave-a" d="M0 186H50L60 92L71 275L82 186H170L180 92L191 275L202 186H290L300 92L311 275L322 186H410L420 92L431 275L442 186H530L540 92L551 275L562 186H700"/>
+              <path class="scope-wave wave-b" d="M0 270C35 270 35 220 70 220S105 320 140 320S175 220 210 220S245 300 280 300S315 235 350 235S385 290 420 290S455 245 490 245S525 280 560 280S595 255 630 255S665 270 700 270"/>
+              <line x1="350" y1="0" x2="350" y2="370" stroke="#ff8b56" stroke-dasharray="5 7" opacity=".7"/>
+            </svg>
+            <div class="scope-foot"><span><i class="cyan"></i>INTERFACE ACTIVITY</span><span><i class="orange"></i>RF ENVELOPE</span><span>DESIGN → MEASURE → REFINE</span></div>
+          </div>
+          <div class="validation-modules" aria-hidden="true"><span>POWER</span><i></i><span>DIGITAL I/O</span><i></i><span>RF PATH</span></div>
+        </div>
         <div class="case-content"><div class="case-meta"><span>01</span><span>Slice · Lille · 2026</span></div><h3>Wireless embedded system</h3><p>Contributed across the complete hardware cycle—from technical choices and board design to the moment the prototype came alive on the bench.</p><div class="case-path" aria-label="Project workflow"><span>Components</span><i>→</i><span>PCB</span><i>→</i><span>Bring-up</span><i>→</i><span>RF tests</span></div><div class="tags"><span>Altium</span><span>ESP32-S3</span><span>LoRa / RF</span><span>Embedded C</span><span>Validation</span></div></div>
       </article>
       <div class="case-grid">
@@ -107,6 +144,6 @@
     <section id="contact" class="contact"><div class="contact-grid"><div><p class="section-index reveal">07 / Let’s connect</p><h2 class="reveal">Looking for an engineer who enjoys making hardware <em>work?</em></h2></div><div class="contact-side reveal"><p>I’m available immediately for embedded electronics, hardware, RF and integration opportunities across France and Belgium.</p><a class="contact-email" href="mailto:ghmaya31@outlook.com">ghmaya31@outlook.com <span>↗</span></a><div class="socials"><a href="https://www.linkedin.com/in/maya-ghezzawi/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/Ghezzawi-Maya" target="_blank" rel="noreferrer">GitHub ↗</a></div></div></div></section>
   </main>
   <footer><span>© 2026 Maya Ghezzawi</span><span>Designed around hardware, curiosity and precision.</span><a href="#home">Back to top ↑</a></footer>
-  <script src="script.js?v=20261002-4"></script>
+  <script src="script.js?v=20261002-6"></script>
 </body>
 </html>
