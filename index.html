@@ -1,87 +1,93 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Portfolio of Maya Ghezzawi, Embedded Electronics and RF Engineer." />
-    <title>Maya Ghezzawi | Embedded Electronics & RF</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="grain"></div>
-    <header class="topbar">
-      <a class="brand" href="#top" aria-label="Maya Ghezzawi home">MG<span>.</span></a>
-      <nav aria-label="Main navigation">
-        <a href="#work">Work</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Maya Ghezzawi — Embedded electronics engineer specialising in PCB design, RF systems and hardware–firmware integration.">
+  <meta name="theme-color" content="#07131f">
+  <meta property="og:title" content="Maya Ghezzawi — Embedded Electronics Engineer">
+  <meta property="og:description" content="From first component choice to a validated prototype: embedded hardware, PCB, RF and firmware integration.">
+  <meta property="og:image" content="assets/hero-electronics.png">
+  <title>Maya Ghezzawi — Embedded Electronics Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <header class="nav-shell">
+    <a class="logo" href="#home" aria-label="Maya Ghezzawi — home">MG<span>/</span></a>
+    <nav aria-label="Main navigation"><a href="#about">About</a><a href="#work">Work</a><a href="#expertise">Expertise</a><a href="#journey">Journey</a></nav>
+    <a class="nav-cta" href="mailto:ghmaya31@outlook.com">Let’s talk <span>↗</span></a>
+  </header>
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-image" aria-hidden="true"></div><div class="hero-vignette" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="availability reveal"><span class="pulse"></span> Available immediately · France & Belgium</div>
+        <p class="kicker reveal">Embedded electronics · RF · Hardware integration</p>
+        <h1 class="reveal">I turn electronic<br>ideas into <em>working</em><br>systems.</h1>
+        <p class="hero-copy reveal">I’m Maya Ghezzawi, an embedded electronics engineer who enjoys the full journey—from component selection and PCB design to firmware bring-up, RF measurements and validation.</p>
+        <div class="hero-actions reveal"><a class="btn btn-primary" href="#work">See what I build <span>↓</span></a><a class="btn btn-ghost" href="https://www.linkedin.com/in/maya-ghezzawi/" target="_blank" rel="noreferrer">LinkedIn <span>↗</span></a></div>
+      </div>
+      <div class="signal-readout" aria-hidden="true"><span>RF SIGNAL</span><svg viewBox="0 0 300 54" preserveAspectRatio="none"><path d="M0 29 C16 29,18 8,34 8 S52 47,69 47 S87 12,104 12 S122 42,139 42 S157 18,174 18 S192 36,209 36 S227 23,244 23 S262 31,300 29"/></svg></div>
+      <a class="scroll-cue" href="#about" aria-label="Scroll to about"><span></span>Scroll</a>
+    </section>
 
-    <main id="top">
-      <section class="hero section">
-        <p class="eyebrow"><span></span> Available immediately · Lille, France · France & Belgium</p>
-        <div class="hero-grid">
-          <div>
-            <h1>Embedded systems,<br /><em>built to work.</em></h1>
-            <p class="lead">I am Maya Ghezzawi, an embedded electronics engineer working across hardware design, RF and board-level validation.</p>
-            <div class="hero-actions">
-              <a class="button" href="#work">Explore my work <b>↘</b></a>
-              <a class="text-link" href="mailto:ghmaya31@outlook.com">Let’s talk <span>→</span></a>
-            </div>
-          </div>
-          <div class="circuit-card" aria-label="Abstract circuit-board illustration">
-            <div class="chip">M G</div><i class="line l1"></i><i class="line l2"></i><i class="line l3"></i><i class="dot d1"></i><i class="dot d2"></i><i class="dot d3"></i>
-            <p>HARDWARE<br />× FIRMWARE<br />× VALIDATION</p>
-          </div>
+    <section id="about" class="section about">
+      <div class="section-index reveal">01 / About</div>
+      <div class="about-grid">
+        <div class="portrait-wrap reveal"><img src="assets/maya-ghezzawi.jpg" alt="Portrait of Maya Ghezzawi"><div class="portrait-label"><span>Lille, France</span><span>Mobile across France & Belgium</span></div></div>
+        <div class="about-copy">
+          <p class="superline reveal">Curious by nature.<br>Precise by training.</p>
+          <h2 class="reveal">I care about what happens between the schematic and the real world.</h2>
+          <p class="reveal">That is where power rails behave differently, RF paths need tuning, interfaces need debugging and a prototype starts revealing its personality. I like being close to that moment: measuring, understanding and improving until the system works reliably.</p>
+          <p class="reveal">My background combines embedded electronics, multilayer PCB design, RF and firmware. I work comfortably across disciplines and communicate in English, French and Arabic.</p>
+          <div class="quick-facts reveal"><div><strong>2026</strong><span>Engineering graduate</span></div><div><strong>3</strong><span>Languages</span></div><div><strong>HW × SW</strong><span>Favourite interface</span></div></div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="statement section">
-        <p class="eyebrow">01 / approach</p>
-        <h2>I like the point where a schematic becomes a working system.</h2>
-        <p>My work combines analytical design with hands-on investigation: selecting components, designing a PCB, bringing up firmware, measuring behaviour and resolving what does not work as expected.</p>
-      </section>
+    <section id="work" class="section work">
+      <div class="section-heading"><div class="section-index reveal">02 / Selected work</div><h2 class="reveal">A few chapters from<br>my engineering journey.</h2></div>
+      <article class="case-study case-hero reveal tilt-card">
+        <div class="case-image"><img src="assets/lab-validation.png" alt="Electronics PCB validation on a laboratory workbench"></div>
+        <div class="case-content"><div class="case-meta"><span>01</span><span>Slice · Lille · 2026</span></div><h3>Wireless embedded system</h3><p>Contributed across the complete hardware cycle—from technical choices and board design to the moment the prototype came alive on the bench.</p><div class="case-path" aria-label="Project workflow"><span>Components</span><i>→</i><span>PCB</span><i>→</i><span>Bring-up</span><i>→</i><span>RF tests</span></div><div class="tags"><span>Altium</span><span>ESP32-S3</span><span>LoRa / RF</span><span>Embedded C</span><span>Validation</span></div></div>
+      </article>
+      <div class="case-grid">
+        <article class="case-study compact reveal tilt-card"><div class="case-number">02</div><div class="case-meta"><span>MultiLane · Lebanon · 2024–25</span></div><h3>High-speed PCB design</h3><p>Multilayer schematics and layout, custom component libraries, simulation and design reviews for high-speed electronic test equipment.</p><div class="tags"><span>OrCAD</span><span>Allegro</span><span>LTspice</span><span>Signal integrity</span></div><div class="board-pattern" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div></article>
+        <article class="case-study compact accent reveal tilt-card"><div class="case-number">03</div><div class="case-meta"><span>JUNIA ISEN × AUST</span></div><h3>Learning across the stack</h3><p>RF and microwave circuits, FPGA design, DSP, power electronics and robotics—building the broad technical base behind my systems thinking.</p><div class="tags"><span>HFSS</span><span>VHDL</span><span>Verilog</span><span>MATLAB</span><span>C/C++</span></div><div class="orbit" aria-hidden="true"><span></span><i></i></div></article>
+      </div>
+      <p class="confidential reveal">Industrial work is intentionally presented at a high level. No confidential schematics, Gerbers, code, test data or client material is published.</p>
+    </section>
 
-      <section id="work" class="section work-section">
-        <p class="eyebrow">02 / selected work</p>
-        <div class="work-list">
-          <article class="project project-featured">
-            <div class="project-number">01</div>
-            <div class="project-copy"><p class="tag">SLICE · 2026 · LILLE</p><h3>Wireless embedded system</h3><p>End-to-end hardware development for a wireless system: component selection, schematic and PCB design, embedded bring-up, interface testing and RF characterisation.</p><ul><li>RF transceivers and power-management selection</li><li>Multilayer PCB and antenna integration</li><li>Firmware bring-up and functional validation</li></ul></div>
-            <div class="project-mark">RF</div>
-          </article>
-          <article class="project">
-            <div class="project-number">02</div>
-            <div class="project-copy"><p class="tag">MULTILANE · 2024–25 · LEBANON</p><h3>High-speed PCB design</h3><p>Detailed design work on multilayer boards for high-speed data-centre components, including schematic capture, footprint creation, simulation, design review and laboratory debugging.</p><p class="tool-line">Altium · OrCAD · Allegro · LTspice</p></div>
-          </article>
-          <article class="project">
-            <div class="project-number">03</div>
-            <div class="project-copy"><p class="tag">ACADEMIC WORK · 2024–26</p><h3>From RF to FPGA</h3><p>Technical projects and coursework spanning RF and microwave electronics, VHDL/Verilog FPGA design, power electronics, digital signal processing and robotics.</p><p class="tool-line">HFSS · Quartus · MATLAB · C/C++</p></div>
-          </article>
-        </div>
-        <p class="confidential-note">Note — industrial projects are described at a high level. No confidential source code, PCB files, test data or client material is published.</p>
-      </section>
+    <section id="expertise" class="section expertise">
+      <div class="section-heading split"><div class="section-index reveal">03 / Expertise</div><h2 class="reveal">One engineer.<br>Three connected worlds.</h2></div>
+      <div class="expertise-list">
+        <article class="expertise-row reveal"><span class="expertise-no">01</span><h3>Hardware & PCB</h3><p>Component selection, schematic capture, multilayer layout, controlled impedance, custom libraries, signal and power integrity.</p><span class="expertise-arrow">↗</span></article>
+        <article class="expertise-row reveal"><span class="expertise-no">02</span><h3>RF & wireless</h3><p>RF stages, antenna integration and matching, S-parameters, characterisation, Ansys HFSS and practical measurement.</p><span class="expertise-arrow">↗</span></article>
+        <article class="expertise-row reveal"><span class="expertise-no">03</span><h3>Embedded & validation</h3><p>C/C++, ARM microcontrollers, interface testing, hardware bring-up, debugging, functional tests and system integration.</p><span class="expertise-arrow">↗</span></article>
+      </div>
+      <div class="tool-marquee" aria-label="Technical tools"><div><span>ALTIUM DESIGNER</span><i>◆</i><span>CADENCE</span><i>◆</i><span>ORCAD</span><i>◆</i><span>ALLEGRO</span><i>◆</i><span>HFSS</span><i>◆</i><span>LTSPICE</span><i>◆</i><span>STM32</span><i>◆</i><span>PYTHON</span><i>◆</i><span>VHDL</span><i>◆</i></div><div aria-hidden="true"><span>ALTIUM DESIGNER</span><i>◆</i><span>CADENCE</span><i>◆</i><span>ORCAD</span><i>◆</i><span>ALLEGRO</span><i>◆</i><span>HFSS</span><i>◆</i><span>LTSPICE</span><i>◆</i><span>STM32</span><i>◆</i><span>PYTHON</span><i>◆</i><span>VHDL</span><i>◆</i></div></div>
+    </section>
 
-      <section id="skills" class="section skills-section">
-        <p class="eyebrow">03 / technical toolkit</p>
-        <div class="skills-grid">
-          <div><span>01</span><h3>Hardware & PCB</h3><p>Altium Designer, Cadence, OrCAD, Allegro PCB Designer. Multilayer layout, controlled impedance, signal and power integrity.</p></div>
-          <div><span>02</span><h3>Embedded & FPGA</h3><p>C/C++, ARM microcontrollers, STM32CubeIDE, VHDL, Verilog, Quartus, Python. Hardware–firmware integration and interface tests.</p></div>
-          <div><span>03</span><h3>RF & Measurement</h3><p>Ansys HFSS, LTspice, antenna integration, RF stages, wireless systems, functional testing and debugging.</p></div>
-        </div>
-      </section>
+    <section id="journey" class="section journey">
+      <div class="section-index reveal">04 / Journey</div>
+      <div class="timeline">
+        <article class="reveal"><time>2026</time><div><h3>Engineering graduate & MSc</h3><p>Embedded Electronics at JUNIA ISEN, Lille, in a double-degree path with an MSc in Computer & Communication Engineering at AUST.</p></div></article>
+        <article class="reveal"><time>2026</time><div><h3>Embedded electronics · Slice</h3><p>End-of-studies project covering wireless hardware, PCB, firmware bring-up, RF characterisation and functional validation.</p></div></article>
+        <article class="reveal"><time>2024–25</time><div><h3>Electronics design · MultiLane</h3><p>Hands-on experience with industrial PCB tools, high-speed design constraints, simulation, review and laboratory debugging.</p></div></article>
+        <article class="reveal"><time>2024</time><div><h3>Engineering assistant · AUST</h3><p>Guided students through C programming and robotics workshops, combining technical work with clear communication.</p></div></article>
+      </div>
+    </section>
 
-      <section id="contact" class="contact section">
-        <p class="eyebrow">04 / contact</p>
-        <h2>Let’s build something<br /><em>reliable.</em></h2>
-        <a class="email" href="mailto:ghmaya31@outlook.com">ghmaya31@outlook.com <span>↗</span></a>
-        <a class="linkedin" href="https://www.linkedin.com/in/maya-ghezzawi/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
-      </section>
-    </main>
-    <footer><span>© 2026 Maya Ghezzawi</span><span>Embedded Electronics & RF Engineer</span></footer>
-  </body>
+    <section class="principles section"><div class="section-index reveal">05 / How I work</div><div class="principle-grid"><p class="reveal">Ask the right<br><em>technical question.</em></p><p class="reveal">Measure before<br><em>assuming.</em></p><p class="reveal">Make complexity<br><em>understandable.</em></p></div></section>
+
+    <section id="contact" class="contact"><div class="contact-grid"><div><p class="section-index reveal">06 / Let’s connect</p><h2 class="reveal">Looking for an engineer who enjoys making hardware <em>work?</em></h2></div><div class="contact-side reveal"><p>I’m available immediately for embedded electronics, hardware, RF and integration opportunities across France and Belgium.</p><a class="contact-email" href="mailto:ghmaya31@outlook.com">ghmaya31@outlook.com <span>↗</span></a><div class="socials"><a href="https://www.linkedin.com/in/maya-ghezzawi/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/Ghezzawi-Maya" target="_blank" rel="noreferrer">GitHub ↗</a></div></div></div></section>
+  </main>
+  <footer><span>© 2026 Maya Ghezzawi</span><span>Designed around hardware, curiosity and precision.</span><a href="#home">Back to top ↑</a></footer>
+  <script src="script.js"></script>
+</body>
 </html>
