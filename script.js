@@ -48,6 +48,28 @@ window.addEventListener('scroll', () => {
   previousScroll = currentScroll;
 }, { passive: true });
 
+const progressBar = document.querySelector('.scroll-progress span');
+const navLinks = [...document.querySelectorAll('nav a[href^="#"]')];
+const trackedSections = navLinks
+  .map((link) => document.querySelector(link.getAttribute('href')))
+  .filter(Boolean);
+
+const updatePageChrome = () => {
+  const scrollRange = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollRange > 0 ? Math.min(window.scrollY / scrollRange, 1) : 0;
+  if (progressBar) progressBar.style.transform = `scaleX(${progress})`;
+
+  let currentId = trackedSections[0]?.id;
+  trackedSections.forEach((section) => {
+    if (section.getBoundingClientRect().top <= window.innerHeight * 0.38) currentId = section.id;
+  });
+  navLinks.forEach((link) => link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`));
+};
+
+window.addEventListener('scroll', updatePageChrome, { passive: true });
+window.addEventListener('resize', updatePageChrome, { passive: true });
+updatePageChrome();
+
 const toolMarquee = document.querySelector('.tool-marquee');
 if (toolMarquee && !reducedMotion) {
   let dragging = false;

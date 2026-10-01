@@ -12,11 +12,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261001-3">
+  <link rel="stylesheet" href="styles.css?v=20261002-4">
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
   <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
   <header class="nav-shell">
     <a class="logo" href="#home" aria-label="Maya Ghezzawi — home">MG<span>/</span></a>
     <nav aria-label="Main navigation"><a href="#about">About</a><a href="#work">Work</a><a href="#expertise">Expertise</a><a href="#journey">Journey</a></nav>
@@ -50,8 +51,26 @@
       </div>
     </section>
 
+    <section id="process" class="process-section" aria-labelledby="process-title">
+      <div class="process-shell">
+        <div class="process-intro reveal">
+          <p class="section-index">02 / Engineering process</p>
+          <h2 id="process-title">From an open question<br>to a <em>measured answer.</em></h2>
+          <p>I enjoy engineering as a connected loop. Each decision becomes stronger when it is tested against the complete system.</p>
+        </div>
+        <div class="process-board reveal">
+          <div class="circuit-trace" aria-hidden="true"><span></span></div>
+          <article tabindex="0"><span>01</span><h3>Understand</h3><p>Translate the need into clear electrical and system constraints.</p></article>
+          <article tabindex="0"><span>02</span><h3>Architect</h3><p>Balance performance, power, availability, cost and integration.</p></article>
+          <article tabindex="0"><span>03</span><h3>Build</h3><p>Turn choices into schematics, layout and bring-up firmware.</p></article>
+          <article tabindex="0"><span>04</span><h3>Measure</h3><p>Probe real behaviour with instruments and structured tests.</p></article>
+          <article tabindex="0"><span>05</span><h3>Refine</h3><p>Use evidence to debug, improve and validate the complete system.</p></article>
+        </div>
+      </div>
+    </section>
+
     <section id="work" class="section work">
-      <div class="section-heading"><div class="section-index reveal">02 / Selected work</div><h2 class="reveal">A few chapters from<br>my engineering journey.</h2></div>
+      <div class="section-heading"><div class="section-index reveal">03 / Selected work</div><h2 class="reveal">A few chapters from<br>my engineering journey.</h2></div>
       <article class="case-study case-hero reveal tilt-card">
         <div class="case-image"><img src="assets/lab-validation.png" alt="Electronics PCB validation on a laboratory workbench"></div>
         <div class="case-content"><div class="case-meta"><span>01</span><span>Slice · Lille · 2026</span></div><h3>Wireless embedded system</h3><p>Contributed across the complete hardware cycle—from technical choices and board design to the moment the prototype came alive on the bench.</p><div class="case-path" aria-label="Project workflow"><span>Components</span><i>→</i><span>PCB</span><i>→</i><span>Bring-up</span><i>→</i><span>RF tests</span></div><div class="tags"><span>Altium</span><span>ESP32-S3</span><span>LoRa / RF</span><span>Embedded C</span><span>Validation</span></div></div>
@@ -64,7 +83,7 @@
     </section>
 
     <section id="expertise" class="section expertise">
-      <div class="section-heading split"><div class="section-index reveal">03 / Expertise</div><h2 class="reveal">One engineer.<br>Three connected worlds.</h2></div>
+      <div class="section-heading split"><div class="section-index reveal">04 / Expertise</div><h2 class="reveal">One engineer.<br>Three connected worlds.</h2></div>
       <div class="expertise-list">
         <article class="expertise-row reveal"><span class="expertise-no">01</span><h3>Hardware & PCB</h3><p>Component selection, schematic capture, multilayer layout, controlled impedance, custom libraries, signal and power integrity.</p><span class="expertise-arrow">↗</span></article>
         <article class="expertise-row reveal"><span class="expertise-no">02</span><h3>RF & wireless</h3><p>RF stages, antenna integration and matching, S-parameters, characterisation, Ansys HFSS and practical measurement.</p><span class="expertise-arrow">↗</span></article>
@@ -74,7 +93,7 @@
     </section>
 
     <section id="journey" class="section journey">
-      <div class="section-index reveal">04 / Journey</div>
+      <div class="section-index reveal">05 / Journey</div>
       <div class="timeline">
         <article class="reveal"><time>2026</time><div><h3>Engineering graduate & MSc</h3><p>Embedded Electronics at JUNIA ISEN, Lille, in a double-degree path with an MSc in Computer & Communication Engineering at AUST.</p></div></article>
         <article class="reveal"><time>2026</time><div><h3>Embedded electronics · Slice</h3><p>End-of-studies project covering wireless hardware, PCB, firmware bring-up, RF characterisation and functional validation.</p></div></article>
@@ -83,11 +102,11 @@
       </div>
     </section>
 
-    <section class="principles section"><div class="section-index reveal">05 / How I work</div><div class="principle-grid"><p class="reveal">Ask the right<br><em>technical question.</em></p><p class="reveal">Measure before<br><em>assuming.</em></p><p class="reveal">Make complexity<br><em>understandable.</em></p></div></section>
+    <section class="principles section"><div class="section-index reveal">06 / How I work</div><div class="principle-grid"><p class="reveal">Ask the right<br><em>technical question.</em></p><p class="reveal">Measure before<br><em>assuming.</em></p><p class="reveal">Make complexity<br><em>understandable.</em></p></div></section>
 
-    <section id="contact" class="contact"><div class="contact-grid"><div><p class="section-index reveal">06 / Let’s connect</p><h2 class="reveal">Looking for an engineer who enjoys making hardware <em>work?</em></h2></div><div class="contact-side reveal"><p>I’m available immediately for embedded electronics, hardware, RF and integration opportunities across France and Belgium.</p><a class="contact-email" href="mailto:ghmaya31@outlook.com">ghmaya31@outlook.com <span>↗</span></a><div class="socials"><a href="https://www.linkedin.com/in/maya-ghezzawi/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/Ghezzawi-Maya" target="_blank" rel="noreferrer">GitHub ↗</a></div></div></div></section>
+    <section id="contact" class="contact"><div class="contact-grid"><div><p class="section-index reveal">07 / Let’s connect</p><h2 class="reveal">Looking for an engineer who enjoys making hardware <em>work?</em></h2></div><div class="contact-side reveal"><p>I’m available immediately for embedded electronics, hardware, RF and integration opportunities across France and Belgium.</p><a class="contact-email" href="mailto:ghmaya31@outlook.com">ghmaya31@outlook.com <span>↗</span></a><div class="socials"><a href="https://www.linkedin.com/in/maya-ghezzawi/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/Ghezzawi-Maya" target="_blank" rel="noreferrer">GitHub ↗</a></div></div></div></section>
   </main>
   <footer><span>© 2026 Maya Ghezzawi</span><span>Designed around hardware, curiosity and precision.</span><a href="#home">Back to top ↑</a></footer>
-  <script src="script.js?v=20261001-3"></script>
+  <script src="script.js?v=20261002-4"></script>
 </body>
 </html>
