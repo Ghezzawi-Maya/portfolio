@@ -9,3 +9,9 @@
   .nav-shell{padding-left:22px;padding-right:22px}.nav-cta{font-size:0;width:42px;height:38px;padding:9px;text-align:center}.nav-cta span{font-size:15px;margin:0}
   .hero-content{width:100%;min-width:0}.hero h1{font-size:45px;line-height:.94}.hero h1 em{display:block}.hero-copy,.kicker{max-width:100%;overflow-wrap:anywhere}.kicker{font-size:9px;line-height:1.7}
 }
+
+/* The tool ribbon auto-scrolls but also remains draggable/swipeable. */
+.tool-marquee{overflow-x:auto;cursor:grab;user-select:none;touch-action:pan-y;scrollbar-width:none}
+.tool-marquee::-webkit-scrollbar{display:none}
+.tool-marquee.dragging{cursor:grabbing}
+.tool-marquee>div{animation:none}

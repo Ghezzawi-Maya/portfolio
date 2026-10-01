@@ -47,3 +47,53 @@ window.addEventListener('scroll', () => {
   nav.style.transform = currentScroll > previousScroll && currentScroll > 180 ? 'translateY(-100%)' : 'translateY(0)';
   previousScroll = currentScroll;
 }, { passive: true });
+
+const toolMarquee = document.querySelector('.tool-marquee');
+if (toolMarquee && !reducedMotion) {
+  let dragging = false;
+  let resumeAt = 0;
+  let pointerStart = 0;
+  let scrollStart = 0;
+  let previousTime = performance.now();
+
+  const ribbonWidth = () => toolMarquee.scrollWidth / 2;
+  toolMarquee.scrollLeft = ribbonWidth() / 2;
+
+  const animateRibbon = (time) => {
+    const elapsed = Math.min(time - previousTime, 32);
+    previousTime = time;
+    if (!dragging && time > resumeAt) {
+      toolMarquee.scrollLeft += elapsed * 0.025;
+      if (toolMarquee.scrollLeft >= ribbonWidth()) toolMarquee.scrollLeft -= ribbonWidth();
+      if (toolMarquee.scrollLeft <= 0) toolMarquee.scrollLeft += ribbonWidth();
+    }
+    requestAnimationFrame(animateRibbon);
+  };
+
+  toolMarquee.addEventListener('pointerdown', (event) => {
+    dragging = true;
+    pointerStart = event.clientX;
+    scrollStart = toolMarquee.scrollLeft;
+    toolMarquee.classList.add('dragging');
+    toolMarquee.setPointerCapture(event.pointerId);
+  });
+
+  toolMarquee.addEventListener('pointermove', (event) => {
+    if (!dragging) return;
+    toolMarquee.scrollLeft = scrollStart - (event.clientX - pointerStart);
+  });
+
+  const finishDrag = (event) => {
+    if (!dragging) return;
+    dragging = false;
+    resumeAt = performance.now() + 1300;
+    toolMarquee.classList.remove('dragging');
+    if (toolMarquee.hasPointerCapture(event.pointerId)) toolMarquee.releasePointerCapture(event.pointerId);
+    if (toolMarquee.scrollLeft >= ribbonWidth()) toolMarquee.scrollLeft -= ribbonWidth();
+    if (toolMarquee.scrollLeft <= 0) toolMarquee.scrollLeft += ribbonWidth();
+  };
+
+  toolMarquee.addEventListener('pointerup', finishDrag);
+  toolMarquee.addEventListener('pointercancel', finishDrag);
+  requestAnimationFrame(animateRibbon);
+}
