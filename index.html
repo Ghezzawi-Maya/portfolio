@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20261002-6">
+  <link rel="stylesheet" href="styles.css?v=20261002-7">
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -96,19 +96,27 @@
     <section id="work" class="section work">
       <div class="section-heading"><div class="section-index reveal">03 / Selected work</div><h2 class="reveal">A few chapters from<br>my engineering journey.</h2></div>
       <article class="case-study case-hero reveal tilt-card">
-        <div class="case-image technical-visual" role="img" aria-label="Conceptual electronics validation interface with animated signals">
-          <div class="scope-window">
-            <div class="scope-head"><span>VALIDATION VIEW</span><span class="scope-live"><i></i> CONCEPTUAL</span></div>
-            <svg viewBox="0 0 700 370" preserveAspectRatio="none" aria-hidden="true">
-              <defs><pattern id="scope-grid" width="70" height="46" patternUnits="userSpaceOnUse"><path d="M70 0H0V46" fill="none" stroke="rgba(104,228,255,.13)" stroke-width="1"/></pattern></defs>
-              <rect width="700" height="370" fill="url(#scope-grid)"/>
-              <path class="scope-wave wave-a" d="M0 186H50L60 92L71 275L82 186H170L180 92L191 275L202 186H290L300 92L311 275L322 186H410L420 92L431 275L442 186H530L540 92L551 275L562 186H700"/>
-              <path class="scope-wave wave-b" d="M0 270C35 270 35 220 70 220S105 320 140 320S175 220 210 220S245 300 280 300S315 235 350 235S385 290 420 290S455 245 490 245S525 280 560 280S595 255 630 255S665 270 700 270"/>
-              <line x1="350" y1="0" x2="350" y2="370" stroke="#ff8b56" stroke-dasharray="5 7" opacity=".7"/>
-            </svg>
-            <div class="scope-foot"><span><i class="cyan"></i>INTERFACE ACTIVITY</span><span><i class="orange"></i>RF ENVELOPE</span><span>DESIGN → MEASURE → REFINE</span></div>
+        <div class="case-image system-architecture" role="img" aria-label="Conceptual wireless embedded system architecture from power management to antenna and validation">
+          <div class="architecture-panel">
+            <div class="architecture-head"><span>SYSTEM ARCHITECTURE</span><span class="architecture-status"><i></i> CONCEPTUAL · NON-CONFIDENTIAL</span></div>
+            <div class="architecture-flow" aria-hidden="true">
+              <div class="arch-node node-power"><span>01</span><b>POWER</b><small>Management</small><i class="node-led"></i></div>
+              <div class="arch-link link-power"><i></i><i></i><i></i></div>
+              <div class="arch-node node-mcu"><span>02</span><b>MCU</b><small>ESP32-S3</small><i class="node-led"></i></div>
+              <div class="arch-link link-bus"><i></i><i></i><i></i><em>DIGITAL BUS</em></div>
+              <div class="arch-node node-rf"><span>03</span><b>RF</b><small>Transceiver</small><i class="node-led"></i></div>
+              <div class="arch-link link-rf"><i></i><i></i><i></i></div>
+              <div class="arch-node node-antenna"><span>04</span><b>ANTENNA</b><small>Wireless path</small><i class="antenna-core"></i><i class="antenna-ring ring-one"></i><i class="antenna-ring ring-two"></i></div>
+            </div>
+            <div class="validation-strip" aria-hidden="true">
+              <div class="validation-copy"><span>VALIDATION LOOP</span><b>BRING-UP · INTERFACES · RF</b></div>
+              <div class="mini-scope">
+                <svg viewBox="0 0 320 74" preserveAspectRatio="none"><path class="mini-grid" d="M0 37H320M80 0V74M160 0V74M240 0V74"/><path class="mini-wave" d="M0 45H25L32 18L41 61L49 45H82L90 18L99 61L107 45H140L148 18L157 61L165 45H195C213 45 214 27 231 27S249 57 267 57S285 38 320 38"/></svg>
+                <span>MEASURE → DEBUG → REFINE</span>
+              </div>
+            </div>
+            <div class="architecture-foot"><span>COMPONENTS</span><i>→</i><span>PCB</span><i>→</i><span>BRING-UP</span><i>→</i><span>VALIDATION</span></div>
           </div>
-          <div class="validation-modules" aria-hidden="true"><span>POWER</span><i></i><span>DIGITAL I/O</span><i></i><span>RF PATH</span></div>
         </div>
         <div class="case-content"><div class="case-meta"><span>01</span><span>Slice · Lille · 2026</span></div><h3>Wireless embedded system</h3><p>Contributed across the complete hardware cycle—from technical choices and board design to the moment the prototype came alive on the bench.</p><div class="case-path" aria-label="Project workflow"><span>Components</span><i>→</i><span>PCB</span><i>→</i><span>Bring-up</span><i>→</i><span>RF tests</span></div><div class="tags"><span>Altium</span><span>ESP32-S3</span><span>LoRa / RF</span><span>Embedded C</span><span>Validation</span></div></div>
       </article>
@@ -144,6 +152,6 @@
     <section id="contact" class="contact"><div class="contact-grid"><div><p class="section-index reveal">07 / Let’s connect</p><h2 class="reveal">Looking for an engineer who enjoys making hardware <em>work?</em></h2></div><div class="contact-side reveal"><p>I’m available immediately for embedded electronics, hardware, RF and integration opportunities across France and Belgium.</p><a class="contact-email" href="mailto:ghmaya31@outlook.com">ghmaya31@outlook.com <span>↗</span></a><div class="socials"><a href="https://www.linkedin.com/in/maya-ghezzawi/" target="_blank" rel="noreferrer">LinkedIn ↗</a><a href="https://github.com/Ghezzawi-Maya" target="_blank" rel="noreferrer">GitHub ↗</a></div></div></div></section>
   </main>
   <footer><span>© 2026 Maya Ghezzawi</span><span>Designed around hardware, curiosity and precision.</span><a href="#home">Back to top ↑</a></footer>
-  <script src="script.js?v=20261002-6"></script>
+  <script src="script.js?v=20261002-7"></script>
 </body>
 </html>
