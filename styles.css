@@ -49,3 +49,7 @@ nav a.active{color:var(--cyan)}
 @media(max-width:950px){.process-intro{grid-template-columns:1fr}.process-intro .section-index{margin-bottom:20px}.process-board{grid-template-columns:repeat(2,1fr)}.process-board article{border-bottom:1px solid rgba(104,228,255,.14)}.process-board article:nth-child(2n){border-right:0}.process-board article:last-child{grid-column:1/-1}.circuit-trace{display:none}}
 @media(max-width:620px){.process-section{padding:85px 22px}.process-board{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none}.process-board::-webkit-scrollbar{display:none}.process-board article{flex:0 0 82%;min-height:230px;scroll-snap-align:center;border-bottom:0}.process-board article:last-child{border-right:0}.process-intro{margin-bottom:45px}}
 @media(prefers-reduced-motion:reduce){.circuit-trace span{animation:none}.process-board article{transition:none}}
+
+/* Expertise rows are informational rather than links. */
+.expertise-row{grid-template-columns:70px .8fr 1.15fr}
+@media(max-width:950px){.expertise-row{grid-template-columns:45px 1fr}.expertise-row p{grid-column:2}}
